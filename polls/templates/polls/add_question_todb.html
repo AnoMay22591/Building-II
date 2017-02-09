@@ -1,0 +1,8 @@
+{% if error_message %}
+<h1> You haven't created questions </h1>
+<a href="{% url 'polls:add_question' %}"> Add question </a> 
+{% else %}
+<h1> You create questions success. </h1>
+<br>Question : {{ question }}
+<br><br><a href="{% url 'polls:index' %}"> back to menu </a> 
+{% endif %}

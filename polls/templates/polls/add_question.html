@@ -1,0 +1,7 @@
+<h1> Create question </h1>
+
+<form action="{% url 'polls:add_question_todb' %}" method="post">
+{% csrf_token %}
+Question: <input type=text name=question >
+<input type="submit" value="Create" />
+</form>

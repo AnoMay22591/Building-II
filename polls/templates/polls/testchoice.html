@@ -1,0 +1,17 @@
+<h1> Create Choice </h1>
+<form action="{% url 'polls:add_choice_todb' %}" method="post">
+{% csrf_token %}
+Select Question: 
+<select name =nquestion>
+<option selected>none
+{% for question in latest_question_list %}
+<option> {{ question.question_text }}
+{% endfor %}
+</select><br><br>
+Choice: <input type=text name=choice value="New Choice">
+<input type="submit" value="Create" />
+</form>
+    
+
+
+    
